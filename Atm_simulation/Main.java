@@ -18,10 +18,10 @@ public class Main {
 
 		if ((atmnumber == number) && (atmpin == pin)) {
 			System.out.println("sucessful validation");
-			
+
 			while (true) {
 				System.out.println("1.view balance");
-				System.out.println("2.with balance");
+				System.out.println("2.withdraw balance");
 				System.out.println("3.depsite balance");
 				System.out.println("4.view minibalance");
 				System.out.println("5.Exit");
@@ -32,13 +32,13 @@ public class Main {
 
 				} else if (ch == 2) {
 					System.out.println("enter amount to be withdraw ");
-					double amt=sc.nextDouble();
+					double amt = sc.nextDouble();
 					a.withdraw(amt);
 
 				} else if (ch == 3) {
-					
+
 					System.out.println("enter amount to be deposited ");
-					double amt=sc.nextDouble();
+					double amt = sc.nextDouble();
 					a.deposite(amt);
 
 				} else if (ch == 4) {
@@ -47,15 +47,17 @@ public class Main {
 				} else if (ch == 5) {
 					System.out.println("collect your atm card and thankyou for your intrest");
 					System.exit(0);
+				} else {
+					System.out.println("Invalid choice");
+					System.exit(0);
+
 				}
-			
-		} 
-		}
-		
-			else {
-				System.out.println("invalid pin or card number");
-				System.exit(0);
 			}
+
+		} else {
+			System.out.println("invalid pin or card number");
+			System.exit(0);
+		}
 
 	}
 
